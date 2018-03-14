@@ -1,0 +1,232 @@
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\csc.exe
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\System.Collections.Immutable.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\vbc.exe
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\VBCSCompiler.exe
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\roslyn\VBCSCompiler.exe.config
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\PetStorePL.dll.config
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\PetStorePL.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\PetStorePL.pdb
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Autofac.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\EntityFramework.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\EntityFramework.SqlServer.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Microsoft.Web.Infrastructure.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Mono.Security.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Npgsql.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Npgsql.EntityFramework.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Helpers.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Mvc.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Razor.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Webpages.Deployment.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Webpages.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Webpages.Razor.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Autofac.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\EntityFramework.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\EntityFramework.SqlServer.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Npgsql.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Npgsql.EntityFramework.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Razor.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Webpages.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Webpages.Deployment.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Webpages.Razor.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Helpers.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\System.Web.Mvc.xml
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\de\Npgsql.resources.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\es\Npgsql.resources.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\fi\Npgsql.resources.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\fr\Npgsql.resources.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\ja\Npgsql.resources.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\zh-CN\Npgsql.resources.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\obj\Debug\PetStorePL.csprojResolveAssemblyReference.cache
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\obj\Debug\PetStorePL.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\obj\Debug\PetStorePL.pdb
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Common.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\PetStoreBL.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\PetStoreDAL.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Common.pdb
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\PetStoreBL.pdb
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\PetStoreDAL.pdb
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Autofac.Integration.Mvc.dll
+c:\users\party rock\documents\visual studio 2015\Projects\PetStore\PetStorePL\bin\Autofac.Integration.Mvc.xml
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\csc.exe
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\System.Collections.Immutable.dll
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\System.Reflection.Metadata.dll
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\vbc.exe
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\VBCSCompiler.exe
+D:\PetStore\PetStore\PetStorePL\bin\roslyn\VBCSCompiler.exe.config
+D:\PetStore\PetStore\PetStorePL\bin\PetStorePL.dll.config
+D:\PetStore\PetStore\PetStorePL\bin\PetStorePL.dll
+D:\PetStore\PetStore\PetStorePL\bin\PetStorePL.pdb
+D:\PetStore\PetStore\PetStorePL\bin\Autofac.dll
+D:\PetStore\PetStore\PetStorePL\bin\Autofac.Integration.Mvc.dll
+D:\PetStore\PetStore\PetStorePL\bin\Common.dll
+D:\PetStore\PetStore\PetStorePL\bin\EntityFramework.dll
+D:\PetStore\PetStore\PetStorePL\bin\EntityFramework.SqlServer.dll
+D:\PetStore\PetStore\PetStorePL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\PetStore\PetStore\PetStorePL\bin\Microsoft.Web.Infrastructure.dll
+D:\PetStore\PetStore\PetStorePL\bin\Mono.Security.dll
+D:\PetStore\PetStore\PetStorePL\bin\Npgsql.dll
+D:\PetStore\PetStore\PetStorePL\bin\Npgsql.EntityFramework.dll
+D:\PetStore\PetStore\PetStorePL\bin\PetStoreBL.dll
+D:\PetStore\PetStore\PetStorePL\bin\PetStoreDAL.dll
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Helpers.dll
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Mvc.dll
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Razor.dll
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Deployment.dll
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.dll
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Razor.dll
+D:\PetStore\PetStore\PetStorePL\bin\Common.pdb
+D:\PetStore\PetStore\PetStorePL\bin\PetStoreBL.pdb
+D:\PetStore\PetStore\PetStorePL\bin\PetStoreDAL.pdb
+D:\PetStore\PetStore\PetStorePL\bin\Autofac.xml
+D:\PetStore\PetStore\PetStorePL\bin\Autofac.Integration.Mvc.xml
+D:\PetStore\PetStore\PetStorePL\bin\EntityFramework.xml
+D:\PetStore\PetStore\PetStorePL\bin\EntityFramework.SqlServer.xml
+D:\PetStore\PetStore\PetStorePL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\PetStore\PetStore\PetStorePL\bin\Npgsql.xml
+D:\PetStore\PetStore\PetStorePL\bin\Npgsql.EntityFramework.xml
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Razor.xml
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.xml
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Deployment.xml
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Razor.xml
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Helpers.xml
+D:\PetStore\PetStore\PetStorePL\bin\System.Web.Mvc.xml
+D:\PetStore\PetStore\PetStorePL\bin\de\Npgsql.resources.dll
+D:\PetStore\PetStore\PetStorePL\bin\es\Npgsql.resources.dll
+D:\PetStore\PetStore\PetStorePL\bin\fi\Npgsql.resources.dll
+D:\PetStore\PetStore\PetStorePL\bin\fr\Npgsql.resources.dll
+D:\PetStore\PetStore\PetStorePL\bin\ja\Npgsql.resources.dll
+D:\PetStore\PetStore\PetStorePL\bin\zh-CN\Npgsql.resources.dll
+D:\PetStore\PetStore\PetStorePL\obj\Debug\PetStorePL.csprojResolveAssemblyReference.cache
+D:\PetStore\PetStore\PetStorePL\obj\Debug\PetStorePL.dll
+D:\PetStore\PetStore\PetStorePL\obj\Debug\PetStorePL.pdb
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\csc.exe
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\vbc.exe
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\VBCSCompiler.exe
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\PetStorePL.dll.config
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\PetStorePL.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\PetStorePL.pdb
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Autofac.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Autofac.Integration.Mvc.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Common.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\EntityFramework.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\EntityFramework.SqlServer.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Mono.Security.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Npgsql.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Npgsql.EntityFramework.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\PetStoreBL.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\PetStoreDAL.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Helpers.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Mvc.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Razor.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Razor.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Common.pdb
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\PetStoreBL.pdb
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\PetStoreDAL.pdb
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Autofac.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Autofac.Integration.Mvc.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\EntityFramework.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\EntityFramework.SqlServer.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Npgsql.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\Npgsql.EntityFramework.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Razor.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Razor.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Helpers.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\System.Web.Mvc.xml
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\de\Npgsql.resources.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\es\Npgsql.resources.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\fi\Npgsql.resources.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\fr\Npgsql.resources.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\ja\Npgsql.resources.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\bin\zh-CN\Npgsql.resources.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\obj\Debug\PetStorePL.csprojResolveAssemblyReference.cache
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\obj\Debug\PetStorePL.dll
+C:\Users\Party Rock\Downloads\PetStore\PetStore\PetStorePL\obj\Debug\PetStorePL.pdb
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\csc.exe
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\System.Collections.Immutable.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\System.Reflection.Metadata.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\vbc.exe
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\VBCSCompiler.exe
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\roslyn\VBCSCompiler.exe.config
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\PetStorePL.dll.config
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\PetStorePL.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\PetStorePL.pdb
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Autofac.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Autofac.Integration.Mvc.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Common.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\EntityFramework.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\EntityFramework.SqlServer.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Microsoft.Web.Infrastructure.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Mono.Security.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Npgsql.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Npgsql.EntityFramework.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\PetStoreBL.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\PetStoreDAL.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Helpers.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Mvc.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Razor.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Deployment.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Razor.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Common.pdb
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\PetStoreBL.pdb
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\PetStoreDAL.pdb
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Autofac.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Autofac.Integration.Mvc.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\EntityFramework.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\EntityFramework.SqlServer.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Npgsql.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\Npgsql.EntityFramework.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Razor.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Deployment.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Webpages.Razor.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Helpers.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\System.Web.Mvc.xml
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\de\Npgsql.resources.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\es\Npgsql.resources.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\fi\Npgsql.resources.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\fr\Npgsql.resources.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\ja\Npgsql.resources.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\bin\zh-CN\Npgsql.resources.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\obj\Debug\PetStorePL.csprojResolveAssemblyReference.cache
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\obj\Debug\PetStorePL.dll
+D:\PetStore (2)\PetStore\PetStore\PetStorePL\obj\Debug\PetStorePL.pdb

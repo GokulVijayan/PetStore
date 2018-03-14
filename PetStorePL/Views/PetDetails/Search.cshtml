@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PetStorePL.ViewModel.PetDetailsViewModel>
+<link rel="stylesheet" href="~/Content/bootstrap.css">
+@{
+    ViewBag.Title = "Search";
+}
+<h2>Search</h2>
+@using (Html.BeginForm())
+{
+    <br />
+    @Html.Label("Pet Type")
+    @Html.RadioButton("option", "PetType")
+    @Html.Label("Breed Type")
+    @Html.RadioButton("option", "Breed")
+    @Html.Label("All")
+    @Html.RadioButton("option", "All")
+    @Html.TextBox("search")<input type="submit"
+                                  name="submit"
+                                  value="Search" class="btn-primary" />
+}
+<section class="products">
+    @foreach (var item in Model)
+    {
+        <div class="product-card">
+            <div class="product-image">
+                <img src="~/Images/@Url.Content(item.ImagePath)">
+            </div>
+            <div class="product-info">
+                <h6>Pet Name:@Html.DisplayFor(modelItem => item.PetName)</h6>
+                <h6>Age:@Html.DisplayFor(modelItem => item.Age)</h6>
+                <h6>Breed Type:@Html.DisplayFor(modelItem => item.BreedType)</h6>
+                <h6>Price:@Html.DisplayFor(modelItem => item.Price)</h6>
+                <h6>Pet Type:@Html.DisplayFor(modelItem => item.PetType)</h6>
+                <h6>Gender:@Html.DisplayFor(modelItem => item.Gender)</h6>
+            </div>
+        </div>
+    }
+</section>
+
+
