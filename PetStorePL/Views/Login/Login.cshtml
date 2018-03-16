@@ -5,36 +5,22 @@
 <link rel="stylesheet" href="~/Content/bootstrap.css">
 @using (Html.BeginForm())
 {
-
     <br />
-    <center>
-        <div class="form-group">
-            <div class="col-sm-12">
+    <div class="container">
+        <center>
+            <div class="form-group">
                 @Html.Label("Username")
-            </div>
-            <div class="col-md-12">
                 @Html.Editor("Username", new { htmlAttributes = new { @class = "form-control", placeholder = "Username" } })
                 @Html.ValidationMessage("Username", "", new { @class = "text-danger" })
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-12">
+            <div class="form-group">
                 @Html.Label("Password")
-            </div>
-            <div class="col-md-12">
                 @Html.Editor("Password", new { htmlAttributes = new { @class = "form-control", placeholder = "Password", @type = "password" } })
                 @Html.ValidationMessage("Password", "", new { @class = "text-danger" })
             </div>
-           
-        </div>
-           
-        <div class="form-group ">
-            <div class="control-label col-md-10">
-                <input type="submit" name="submit" value="Login" class="btn btn-primary" style="margin-left:160px;" />
-            </div>
-        </div>
-    </center>
-
+            <input type="submit" name="submit" value="Login" class="btn btn-primary form-control" />
+        </center>
+    </div>
 }
 
 

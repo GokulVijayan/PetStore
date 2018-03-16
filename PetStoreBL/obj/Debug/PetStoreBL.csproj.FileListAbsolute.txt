@@ -79,3 +79,57 @@ D:\PetStore (2)\PetStore\PetStore\PetStoreBL\bin\Debug\zh-CN\Npgsql.resources.dl
 D:\PetStore (2)\PetStore\PetStore\PetStoreBL\obj\Debug\PetStoreBL.csprojResolveAssemblyReference.cache
 D:\PetStore (2)\PetStore\PetStore\PetStoreBL\obj\Debug\PetStoreBL.dll
 D:\PetStore (2)\PetStore\PetStore\PetStoreBL\obj\Debug\PetStoreBL.pdb
+D:\project\PetStore\PetStoreBL\bin\Debug\PetStoreBL.dll.config
+D:\project\PetStore\PetStoreBL\bin\Debug\PetStoreBL.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\PetStoreBL.pdb
+D:\project\PetStore\PetStoreBL\bin\Debug\Autofac.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\Common.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\EntityFramework.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\EntityFramework.SqlServer.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\Mono.Security.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\Npgsql.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\Npgsql.EntityFramework.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\PetStoreDAL.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\Common.pdb
+D:\project\PetStore\PetStoreBL\bin\Debug\PetStoreDAL.pdb
+D:\project\PetStore\PetStoreBL\bin\Debug\Autofac.xml
+D:\project\PetStore\PetStoreBL\bin\Debug\EntityFramework.xml
+D:\project\PetStore\PetStoreBL\bin\Debug\EntityFramework.SqlServer.xml
+D:\project\PetStore\PetStoreBL\bin\Debug\Npgsql.xml
+D:\project\PetStore\PetStoreBL\bin\Debug\Npgsql.EntityFramework.xml
+D:\project\PetStore\PetStoreBL\bin\Debug\de\Npgsql.resources.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\es\Npgsql.resources.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\fi\Npgsql.resources.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\fr\Npgsql.resources.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\ja\Npgsql.resources.dll
+D:\project\PetStore\PetStoreBL\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\project\PetStore\PetStoreBL\obj\Debug\PetStoreBL.csprojResolveAssemblyReference.cache
+D:\project\PetStore\PetStoreBL\obj\Debug\PetStoreBL.dll
+D:\project\PetStore\PetStoreBL\obj\Debug\PetStoreBL.pdb
+D:\final project\PetStore\PetStoreBL\bin\Debug\PetStoreBL.dll.config
+D:\final project\PetStore\PetStoreBL\bin\Debug\PetStoreBL.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\PetStoreBL.pdb
+D:\final project\PetStore\PetStoreBL\bin\Debug\Autofac.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\Common.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\EntityFramework.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\EntityFramework.SqlServer.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\Mono.Security.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\Npgsql.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\Npgsql.EntityFramework.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\PetStoreDAL.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\Common.pdb
+D:\final project\PetStore\PetStoreBL\bin\Debug\PetStoreDAL.pdb
+D:\final project\PetStore\PetStoreBL\bin\Debug\Autofac.xml
+D:\final project\PetStore\PetStoreBL\bin\Debug\EntityFramework.xml
+D:\final project\PetStore\PetStoreBL\bin\Debug\EntityFramework.SqlServer.xml
+D:\final project\PetStore\PetStoreBL\bin\Debug\Npgsql.xml
+D:\final project\PetStore\PetStoreBL\bin\Debug\Npgsql.EntityFramework.xml
+D:\final project\PetStore\PetStoreBL\bin\Debug\de\Npgsql.resources.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\es\Npgsql.resources.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\fi\Npgsql.resources.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\fr\Npgsql.resources.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\ja\Npgsql.resources.dll
+D:\final project\PetStore\PetStoreBL\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\final project\PetStore\PetStoreBL\obj\Debug\PetStoreBL.csprojResolveAssemblyReference.cache
+D:\final project\PetStore\PetStoreBL\obj\Debug\PetStoreBL.dll
+D:\final project\PetStore\PetStoreBL\obj\Debug\PetStoreBL.pdb

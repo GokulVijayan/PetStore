@@ -4,30 +4,33 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PetStoreBL.Services;
-using PetStorePL.ViewModel;
+using Common.ViewModel;
 using Common;
 using System.Net;
+using System.IO;
+using PagedList;
+using PetStorePL.ViewModel;
 
-namespace PetStorePL.Controllers
+namespace Common.Controllers
 {
     public class PetDetailsController : Controller
     {
-        private readonly IPetService transRepos;
+        private readonly IPetService petService;
         public static int petId;
         public PetDetailsController()
         {
 
         }
-        public PetDetailsController(IPetService transactionRepo)
+        public PetDetailsController(IPetService petServ)
         {
-            transRepos = transactionRepo;
+            petService = petServ;
         }
         [Authorize]
         public ActionResult Create()
         {
 
-            var xx = GetPetType();
-            var petType = new SelectList(xx, "TypeId", "PetType");
+            var pet = GetPetType();
+            var petType = new SelectList(pet, "TypeId", "PetType");
             ViewData["pettype"] = petType;
             return View();
         }
@@ -37,64 +40,92 @@ namespace PetStorePL.Controllers
         /// <returns></returns>
         public IEnumerable<PetViewModel> GetPetType()
         {
-            IEnumerable<PetDto> petdetails = transRepos.GetType();
-            var x = from g in petdetails
+            IEnumerable<PetDto> petdetails = petService.GetType();
+            var pettype = from g in petdetails
                     select new PetViewModel
                     {
                         PetType = g.PetType,
                         TypeId = g.TypeId
                     };
-            return x.ToList();
+            return pettype.ToList();
         }
+        /// <summary>
+        /// To create a pet
+        /// </summary>
+        /// <param name="petdetails"></param>
+        /// <param name="file"></param>
+        /// <returns></returns>
         [HttpPost]
         [Authorize]
         public ActionResult Create([Bind(Include = "Age,ImagePath,BreedType,PetName,Price,PetType,Gender")] PetDetailsViewModel petdetails, HttpPostedFileBase file)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                if (file != null)
                 {
-                    if (file != null)
+                    file.SaveAs(HttpContext.Server.MapPath("~/Images/") + file.FileName);
+                    var filepath = HttpContext.Server.MapPath("~/Images/") + file.FileName;
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".JPG", ".JPEG" };
+                    var checkextension = Path.GetExtension(file.FileName).ToLower();
+                    if (!allowedExtensions.Contains(checkextension))
                     {
-                        file.SaveAs(HttpContext.Server.MapPath("~/Images/") + file.FileName);
-                        var filepath = HttpContext.Server.MapPath("~/Images/") + file.FileName;
-                        PetDetailsDto pet = new PetDetailsDto
-                        {
-                            Age = petdetails.Age,
-                            ImagePath = file.FileName,
-                            BreedType = petdetails.BreedType,
-                            PetName = petdetails.PetName,
-                            Price = petdetails.Price,
-                            PetType = petdetails.PetType,
-                            Gender = petdetails.Gender
-                        };
-
-                        transRepos.Save(pet);
-                        return View("Index");
+                        TempData["notice"] = "Select jpeg or png";
                     }
                     else
                     {
-                        return View(petdetails);
+                        using (System.Drawing.Image image = System.Drawing.Image.FromStream(file.InputStream, true, true))
+                        {
+                            if (image.Width <= 600 && image.Height <= 600)
+                            {
+                                PetDetailsDto pet = ConvertToDto(petdetails, file);
+                                petService.Save(pet);
+                                return RedirectToAction("Index");
+                            }
+                        }
                     }
                 }
-                var xx = GetPetType();
-                var petType = new SelectList(xx, "TypeId", "PetType");
-                ViewData["pettype"] = petType;
-                return View(petdetails);
+                else
+                {
+                    return View(petdetails);
+                }
             }
-            catch (Exception ex)
+            var pet = GetPetType();
+            var petType = new SelectList(pet, "TypeId", "PetType");
+            ViewData["pettype"] = petType;
+            return View(petdetails);
+        }
+        /// <summary>
+        /// To convert to dto
+        /// </summary>
+        /// <param name="petdetails"></param>
+        /// <param name="file"></param>
+        /// <returns></returns>
+        PetDetailsDto ConvertToDto(PetDetailsViewModel petdetails, HttpPostedFileBase file)
+        {
+            PetDetailsDto pet = new PetDetailsDto
             {
-                return View("Error", new HandleErrorInfo(ex, "PetDetailsViewModel", "Create"));
-            }
+                Age = petdetails.Age,
+                ImagePath = file.FileName,
+                BreedType = petdetails.BreedType,
+                PetName = petdetails.PetName,
+                Price = petdetails.Price,
+                PetType = petdetails.PetType,
+                Gender = petdetails.Gender
+            };
+            return pet;
         }
         [Authorize]
         public ActionResult Index()
         {
             return View(ViewDetails());
         }
+        /// <summary>
+        /// To View all pet details
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<PetDetailsViewModel> ViewDetails()
         {
-            IEnumerable<PetDetailsDto> petdetails = transRepos.FindAll();
+            IEnumerable<PetDetailsDto> petdetails = petService.FindAll();
             var pet = GetAllPets(petdetails);
             return pet;
         }
@@ -104,55 +135,43 @@ namespace PetStorePL.Controllers
         /// <param name="option"></param>
         /// <param name="search"></param>
         /// <returns></returns>
-        public ActionResult Search(String option, String search)
+        public ActionResult Search(string pettype, string breedtype, string age, string price, int? PageNo)
         {
-            try
-            {
-                if (option == null)
-                {
-                    return View(ViewDetails());
-                }
-                else if (option == "PetType")
-                {
-                    if (!string.IsNullOrEmpty(search))
-                        return View(SortByPetType(search));
-                    else
-                    {
-                        ModelState.AddModelError("Search", "Please enter pet type");
-                        return View(ViewDetails());
-                    }
-                }
-                else if (option == "Breed")
-                {
-                    if (!string.IsNullOrEmpty(search))
-                        return View(SortByBreed(search));
-                    else
-                    {
-                        return View(ViewDetails());
-                    }
+            var type = GetPetType();
+            var petType = new SelectList(type, "TypeId", "PetType");
+            ViewData["pettype"] = petType;
 
-                }
-                else if (option == "All")
-                {
-                    return View(ViewDetails());
-                }
-                return View();
-            }
-            catch(Exception ex)
+            var pagenumber = (PageNo ?? 1) - 1;
+            var totalCount = 0;
+            Page p = new Page();
+            p.PageNumber = pagenumber;
+            p.PageSize = 3;
+
+            p.TotalCount = totalCount;
+            ViewBag.pettypes = pettype;
+            ViewBag.breedtype = breedtype;
+            ViewBag.age = age;
+            ViewBag.price = price;
+            if ((string.IsNullOrEmpty(breedtype) && (string.IsNullOrEmpty(age) && (string.IsNullOrEmpty(price)))))
             {
-                return View("Error", new HandleErrorInfo(ex, "PetDetailsViewModel", "Search"));
+
+                List<PetDetailsViewModel> petdetails = SortByPetType(pettype,p, out totalCount).ToList();
+                if (petdetails == null)
+                    return View();
+                else
+                {
+                    IPagedList<PetDetailsViewModel> pageOrders = new StaticPagedList<PetDetailsViewModel>(petdetails, pagenumber + 1, 3, totalCount);
+                    return View(pageOrders);
+                }
             }
-        }
-        /// <summary>
-        /// To sort by breed
-        /// </summary>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        public IEnumerable<PetDetailsViewModel> SortByBreed(string type)
-        {
-            IEnumerable<PetDetailsDto> petdetails = transRepos.SortByBreed(type);
-            var pet = GetAllPets(petdetails);
-            return pet;
+            else
+            {
+                var pet = petService.GetPetDetails(pettype, breedtype, age, price, p, out totalCount);
+                var petdetails = GetAllPets(pet).ToList();
+                IPagedList<PetDetailsViewModel> pageOrders = new StaticPagedList<PetDetailsViewModel>(petdetails, pagenumber + 1, 3, totalCount);
+                return View(pageOrders);
+
+            }
         }
         /// <summary>
         /// To list all pets
@@ -179,9 +198,10 @@ namespace PetStorePL.Controllers
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public IEnumerable<PetDetailsViewModel> SortByPetType(string type)
+        public IEnumerable<PetDetailsViewModel> SortByPetType(string type,Page page, out int totalCount)
         {
-            IEnumerable<PetDetailsDto> petdetails = transRepos.SortByPetType(type);
+
+            IEnumerable<PetDetailsDto> petdetails = petService.SortByPetType(type, page, out totalCount);
             var pet = GetAllPets(petdetails);
             return pet;
 
@@ -190,7 +210,7 @@ namespace PetStorePL.Controllers
         {
             try
             {
-                int? id = transRepos.GetPetId(petName, breedType);
+                int? id = petService.GetPetId(petName, breedType);
                 if (id == null)
                 {
                     return RedirectToAction("Index", "PetDetails");
@@ -202,24 +222,34 @@ namespace PetStorePL.Controllers
                 else
                     return View();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return View("Error", new HandleErrorInfo(ex, "PetDetailsViewModel", "Find"));
             }
         }
+        /// <summary>
+        /// To delete particular pet
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Authorize]
         public ActionResult Delete(int id)
         {
             try
             {
-                transRepos.DeletePetRecord(id);
+                petService.DeletePetRecord(id);
                 return RedirectToAction("Index");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return View("Error", new HandleErrorInfo(ex, "PetDetailsViewModel", "Delete"));
+                return View("Index", new HandleErrorInfo(ex, "PetDetailsViewModel", "Delete"));
             }
         }
+        /// <summary>
+        /// To edit a pet record
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Authorize]
         public ActionResult Edit(int id)
         {
@@ -259,7 +289,7 @@ namespace PetStorePL.Controllers
                         PetType = petdetails.PetType,
                         Gender = petdetails.Gender
                     };
-                    transRepos.EditPet(pet, petId);
+                    petService.EditPet(pet, petId);
                     return RedirectToAction("Index");
                 }
                 else if (file == null)
@@ -274,7 +304,7 @@ namespace PetStorePL.Controllers
                         PetType = petdetails.PetType,
                         Gender = petdetails.Gender
                     };
-                    transRepos.EditPet(pet, petId);
+                    petService.EditPet(pet, petId);
                     return RedirectToAction("Index");
                 }
             }
@@ -291,7 +321,7 @@ namespace PetStorePL.Controllers
         /// <returns></returns>
         public PetDetailsViewModel GetPetById(int id)
         {
-            PetDetailsDto pet = transRepos.GetPetById(id);
+            PetDetailsDto pet = petService.GetPetById(id);
             PetDetailsViewModel pt = new PetDetailsViewModel
             {
                 Age = pet.Age,

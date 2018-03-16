@@ -1,5 +1,5 @@
 ﻿
-namespace PetStorePL.ViewModel
+namespace Common.ViewModel
 {
     public class PetViewModel
     {

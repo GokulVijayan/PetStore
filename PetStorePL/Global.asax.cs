@@ -10,7 +10,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using PetStoreBL.Services;
-namespace PetStorePL
+namespace Common
 {
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -26,6 +26,8 @@ namespace PetStorePL
             builder.RegisterSource(new ViewRegistrationSource());
             builder.RegisterType<PetRepository>().As<IPetRepository>();
             builder.RegisterType<PetService>().As<IPetService>();
+            builder.RegisterType<DiscountRepository>().As<IDiscountRepository>();
+            builder.RegisterType<DiscountService>().As<IDiscountService>();
             builder.RegisterType<PetDbContext>();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

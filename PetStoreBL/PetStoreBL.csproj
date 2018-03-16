@@ -70,6 +70,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DiscountService.cs" />
+    <Compile Include="Services\IDiscountService.cs" />
     <Compile Include="Services\IPetService.cs" />
     <Compile Include="Services\PetService.cs" />
   </ItemGroup>

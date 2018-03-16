@@ -67,3 +67,49 @@ D:\PetStore (2)\PetStore\PetStore\Common\bin\Debug\zh-CN\Npgsql.resources.dll
 D:\PetStore (2)\PetStore\PetStore\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 D:\PetStore (2)\PetStore\PetStore\Common\obj\Debug\Common.dll
 D:\PetStore (2)\PetStore\PetStore\Common\obj\Debug\Common.pdb
+D:\project\PetStore\Common\bin\Debug\Common.dll.config
+D:\project\PetStore\Common\bin\Debug\Common.dll
+D:\project\PetStore\Common\bin\Debug\Common.pdb
+D:\project\PetStore\Common\bin\Debug\Autofac.dll
+D:\project\PetStore\Common\bin\Debug\EntityFramework.dll
+D:\project\PetStore\Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\project\PetStore\Common\bin\Debug\Mono.Security.dll
+D:\project\PetStore\Common\bin\Debug\Npgsql.dll
+D:\project\PetStore\Common\bin\Debug\Npgsql.EntityFramework.dll
+D:\project\PetStore\Common\bin\Debug\Autofac.xml
+D:\project\PetStore\Common\bin\Debug\EntityFramework.xml
+D:\project\PetStore\Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\project\PetStore\Common\bin\Debug\Npgsql.xml
+D:\project\PetStore\Common\bin\Debug\Npgsql.EntityFramework.xml
+D:\project\PetStore\Common\bin\Debug\de\Npgsql.resources.dll
+D:\project\PetStore\Common\bin\Debug\es\Npgsql.resources.dll
+D:\project\PetStore\Common\bin\Debug\fi\Npgsql.resources.dll
+D:\project\PetStore\Common\bin\Debug\fr\Npgsql.resources.dll
+D:\project\PetStore\Common\bin\Debug\ja\Npgsql.resources.dll
+D:\project\PetStore\Common\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\project\PetStore\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\project\PetStore\Common\obj\Debug\Common.dll
+D:\project\PetStore\Common\obj\Debug\Common.pdb
+D:\final project\PetStore\Common\bin\Debug\Common.dll.config
+D:\final project\PetStore\Common\bin\Debug\Common.dll
+D:\final project\PetStore\Common\bin\Debug\Common.pdb
+D:\final project\PetStore\Common\bin\Debug\Autofac.dll
+D:\final project\PetStore\Common\bin\Debug\EntityFramework.dll
+D:\final project\PetStore\Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\final project\PetStore\Common\bin\Debug\Mono.Security.dll
+D:\final project\PetStore\Common\bin\Debug\Npgsql.dll
+D:\final project\PetStore\Common\bin\Debug\Npgsql.EntityFramework.dll
+D:\final project\PetStore\Common\bin\Debug\Autofac.xml
+D:\final project\PetStore\Common\bin\Debug\EntityFramework.xml
+D:\final project\PetStore\Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\final project\PetStore\Common\bin\Debug\Npgsql.xml
+D:\final project\PetStore\Common\bin\Debug\Npgsql.EntityFramework.xml
+D:\final project\PetStore\Common\bin\Debug\de\Npgsql.resources.dll
+D:\final project\PetStore\Common\bin\Debug\es\Npgsql.resources.dll
+D:\final project\PetStore\Common\bin\Debug\fi\Npgsql.resources.dll
+D:\final project\PetStore\Common\bin\Debug\fr\Npgsql.resources.dll
+D:\final project\PetStore\Common\bin\Debug\ja\Npgsql.resources.dll
+D:\final project\PetStore\Common\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\final project\PetStore\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\final project\PetStore\Common\obj\Debug\Common.dll
+D:\final project\PetStore\Common\obj\Debug\Common.pdb

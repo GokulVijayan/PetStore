@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Security;
 
-namespace PetStorePL.Controllers
+namespace Common.Controllers
 {
     public class LoginController : Controller
     {

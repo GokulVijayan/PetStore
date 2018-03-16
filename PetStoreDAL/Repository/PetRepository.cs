@@ -3,10 +3,12 @@ using System.Linq;
 using PetStoreDAL.Models;
 using PetStoreDAL.DBContext;
 using System.Data.Entity;
+using System;
+using Common;
 
 namespace PetStoreDAL.Repository
 {
-    public class PetRepository :IPetRepository
+    public class PetRepository : IPetRepository
     {
         PetDbContext db = new PetDbContext();
         /// <summary>
@@ -39,18 +41,12 @@ namespace PetStoreDAL.Repository
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public IEnumerable<PetDetails> SortByPetType(string type)
+        public IEnumerable<PetDetails> SortByPetType(string type, Page page, out int totalCount)
         {
-            return db.petdetails.Where(p =>p.pet.PetType==type).ToList();
-        }
-        /// <summary>
-        /// To sort according to breed
-        /// </summary>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        public IEnumerable<PetDetails> SortByBreed(string type)
-        {
-            return db.petdetails.Where(p => p.BreedType==type).ToList();
+            var petid = Convert.ToInt32(type);
+            var pett = db.petdetails.Where(p => p.pet.TypeId == petid).OrderBy(p => p.PetName).Skip(page.PageSize * page.PageNumber).Take(page.PageSize).ToList();
+            totalCount = db.petdetails.Count();
+            return pett;
         }
         /// <summary>
         /// Delete pet record
@@ -58,7 +54,7 @@ namespace PetStoreDAL.Repository
         /// <param name="id"></param>
         public void DeletePetRecord(int id)
         {
-            var pet = db.petdetails.Where(p => p.PetId==id).FirstOrDefault();
+            var pet = db.petdetails.Where(p => p.PetId == id).FirstOrDefault();
             db.petdetails.Remove(pet);
             Save();
         }
@@ -91,6 +87,55 @@ namespace PetStoreDAL.Repository
         {
             db.Entry(pd).State = EntityState.Modified;
             Save();
+        }
+        public IEnumerable<PetDetails> GetPetDetails(string pettype, string breedtype, string age, string price, Page pp, out int totalcount)
+        {
+
+            var typeid = Convert.ToInt32(pettype);
+            if (string.IsNullOrEmpty(age) && string.IsNullOrEmpty(price))
+            {
+                var pet = db.petdetails.Where(p => p.pet.TypeId == typeid && p.BreedType == breedtype).OrderBy(p => p.PetName).Skip(pp.PageSize * pp.PageNumber).Take(pp.PageSize).ToList();
+                totalcount = db.petdetails.Count();
+                return pet;
+            }
+            else if (string.IsNullOrEmpty(breedtype) && string.IsNullOrEmpty(age))
+            {
+                var petprice = Convert.ToSingle(price);
+                var pet = db.petdetails.Where(p => p.pet.TypeId == typeid && p.Price <= petprice).OrderBy(b => b.PetName).Skip(pp.PageSize * pp.PageNumber).Take(pp.PageSize).ToList();
+                totalcount = db.petdetails.Count();
+                return pet;
+            }
+            else if (string.IsNullOrEmpty(breedtype) && string.IsNullOrEmpty(price))
+            {
+                var petage = Convert.ToInt32(age);
+                var pet = db.petdetails.Where(p => p.pet.TypeId == typeid && p.Age <= petage).OrderBy(b => b.PetName).Skip(pp.PageSize * pp.PageNumber).Take(pp.PageSize).ToList();
+                totalcount = db.petdetails.Count();
+                return pet;
+
+            }
+            else if (string.IsNullOrEmpty(age))
+            {
+                var petprice = Convert.ToSingle(price);
+                var pet = db.petdetails.Where(p => p.pet.TypeId == typeid && p.BreedType == breedtype && p.Price <= petprice).OrderBy(b => b.PetName).Skip(pp.PageSize * pp.PageNumber).Take(pp.PageSize).ToList();
+                totalcount = db.petdetails.Count();
+                return pet;
+
+            }
+            else if (string.IsNullOrEmpty(price))
+            {
+                var petage = Convert.ToInt32(age);
+                var pet = db.petdetails.Where(p => p.pet.TypeId == typeid && p.BreedType == breedtype && p.Age <= petage).OrderBy(b => b.PetName).Skip(pp.PageSize * pp.PageNumber).Take(pp.PageSize).ToList();
+                totalcount = db.petdetails.Count();
+                return pet;
+            }
+            else
+            {
+                var petage = Convert.ToInt32(age);
+                var petprice = Convert.ToSingle(price);
+                var pet = db.petdetails.Where(p => p.pet.TypeId == typeid && p.Price <= petprice && p.Age <= petage && p.BreedType == breedtype).OrderBy(b => b.PetName).Skip(pp.PageSize * pp.PageNumber).Take(pp.PageSize).ToList(); ;
+                totalcount = db.petdetails.Count();
+                return pet;
+            }
         }
     }
 }

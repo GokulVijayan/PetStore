@@ -69,6 +69,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiscountDto.cs" />
+    <Compile Include="Page.cs" />
     <Compile Include="PetDetailsDto.cs" />
     <Compile Include="PetDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

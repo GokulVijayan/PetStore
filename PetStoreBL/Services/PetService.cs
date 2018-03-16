@@ -9,10 +9,10 @@ namespace PetStoreBL.Services
 {
     public class PetService:IPetService
     {
-        private readonly IPetRepository transRepos;
-        public PetService(IPetRepository transactionRepo)
+        private readonly IPetRepository petRepository;
+        public PetService(IPetRepository petRepo)
         {
-            transRepos = transactionRepo;
+            petRepository = petRepo;
         }
         /// <summary>
         /// To delete pet record
@@ -20,9 +20,8 @@ namespace PetStoreBL.Services
         /// <param name="id"></param>
         public void DeletePetRecord(int id)
         {
-            transRepos.DeletePetRecord(id);
+            petRepository.DeletePetRecord(id);
         }
-
         public void EditPet(PetDetailsDto pd,int petId)
         {
             PetDetails pett = new PetDetails
@@ -38,11 +37,11 @@ namespace PetStoreBL.Services
 
                 
             };
-            transRepos.EditPet(pett);
+            petRepository.EditPet(pett);
         }
         public IEnumerable<PetDetailsDto> FindAll()
         {
-            IEnumerable<PetDetails>petdetails = transRepos.FindAll();
+            IEnumerable<PetDetails>petdetails = petRepository.FindAll();
             IEnumerable<PetDetailsDto> pt =from g in petdetails select new PetDetailsDto
             {
                 Age=g.Age,
@@ -63,7 +62,7 @@ namespace PetStoreBL.Services
         /// <returns></returns>
         public PetDetailsDto GetPetById(int id)
         {
-            PetDetails petdetails = transRepos.GetPetById(id);
+            PetDetails petdetails = petRepository.GetPetById(id);
             PetDetailsDto pett = new PetDetailsDto
             {
                 Age = petdetails.Age,
@@ -84,7 +83,7 @@ namespace PetStoreBL.Services
         /// <returns></returns>
         public int GetPetId(string petName, string breedType)
         {
-            var id = transRepos.GetPetId(petName, breedType);
+            var id = petRepository.GetPetId(petName, breedType);
             return id;
         }
         public void Save(PetDetailsDto pet)
@@ -100,28 +99,17 @@ namespace PetStoreBL.Services
                 Gender=pet.Gender
                 
             };
-            transRepos.SaveDetails(pett);
+            petRepository.SaveDetails(pett);
         }
         /// <summary>
         /// To sort pet by pet type
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public IEnumerable<PetDetailsDto> SortByPetType(string type)
+        public IEnumerable<PetDetailsDto> SortByPetType(string type,Page page, out int totalCount)
         {
-            IEnumerable<PetDetails> petdetails = transRepos.SortByPetType(type);
+            IEnumerable<PetDetails> petdetails = petRepository.SortByPetType(type, page, out totalCount);
             var pet = ListPets(petdetails);
-            return pet;
-        }
-        /// <summary>
-        /// To sort pet by breed
-        /// </summary>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        public IEnumerable<PetDetailsDto> SortByBreed(string type)
-        {
-            IEnumerable<PetDetails> petdetails = transRepos.SortByBreed(type);
-            var pet=ListPets(petdetails);
             return pet;
         }
         /// <summary>
@@ -150,7 +138,7 @@ namespace PetStoreBL.Services
         /// <returns></returns>
         IEnumerable<PetDto> IPetService.GetType()
         {
-            IEnumerable<Pet> petdetails = transRepos.GetType();
+            IEnumerable<Pet> petdetails = petRepository.GetType();
             IEnumerable<PetDto> pt = from g in petdetails
                                             select new PetDto
                                             {
@@ -160,5 +148,11 @@ namespace PetStoreBL.Services
             return pt.ToList();
 
         }
+        public IEnumerable<PetDetailsDto> GetPetDetails(string pettype, string breedtype, string age, string price,Page p,out int totalcount)
+        {
+            IEnumerable<PetDetails> petdetails = petRepository.GetPetDetails(pettype,breedtype,age,price,p,out totalcount);
+            var pet = ListPets(petdetails);
+            return pet;
+        } 
     }
 }
