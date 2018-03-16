@@ -69,7 +69,7 @@ namespace Common.Controllers
                     var checkextension = Path.GetExtension(file.FileName).ToLower();
                     if (!allowedExtensions.Contains(checkextension))
                     {
-                        TempData["notice"] = "Select jpeg or png";
+                        
                         ViewBag.ErrorMessage = "Select jpeg or png Image with height and width less than 600";
                     }
                     else
@@ -132,7 +132,7 @@ namespace Common.Controllers
             return pet;
         }
         /// <summary>
-        /// To search pet according to pettype,breed
+        /// To search pet according to pettype,breed,age,price
         /// </summary>
         /// <param name="option"></param>
         /// <param name="search"></param>
@@ -255,7 +255,9 @@ namespace Common.Controllers
         [Authorize]
         public ActionResult Edit(int id)
         {
+#pragma warning disable CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
             if (id == null)
+#pragma warning restore CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }

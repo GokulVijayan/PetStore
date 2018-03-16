@@ -2,8 +2,7 @@
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
-@using (Html.BeginForm("Create", "PetDetails", null, FormMethod.Post,new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Create", "PetDetails", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     <div class="form-horizontal">
@@ -21,7 +20,6 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
-
             </div>
         </div>
         <div class="form-group">
@@ -68,7 +66,7 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Add Pet" class="btn btn-primary"/>
+                <input type="submit" value="Add Pet" class="btn btn-primary" />
             </div>
         </div>
     </div>

@@ -9,53 +9,57 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <h2>Search</h2>
-@using (Html.BeginForm("Search", "PetDetails", FormMethod.Get))
-{
-    <div class="container">
-        <div class="form-inline">
-            <div class="form-group">
-                @Html.Label("Pet Type")
-                @Html.DropDownList("PetType", (IEnumerable<SelectListItem>)ViewData["pettype"], new { @class = "form-control" })
-            </div>
-            <div class="form-group">
-                @Html.Label("Breed")
-                @Html.TextBox("BreedType", null, new { @class = "form-control" })
-            </div>
-            <div class="form-group">
-                @Html.Label("Price")
-                @Html.TextBox("Price", null, new { @type = "number", @class = "form-control" })
-            </div>
-            <div class="form-group">
-                @Html.Label("Age")
-                @Html.TextBox("Age", null, new { @type = "number", @class = "form-control" })
-            </div>
-            <div class="form-group">
-                <button type="submit" name="submit" value="Search" class="btn-primary form-control">Search</button>
-            </div>
-        </div>
+<div class="container">
+    <div>@Html.ActionLink("Discounts Available", "Details", "Discounts", null, new { @class = "btn btn-primary" })</div>
     </div>
-}
-<section class="products">
-    @foreach (var item in Model)
+    @using (Html.BeginForm("Search", "PetDetails", FormMethod.Get))
     {
-        <div class="product-card">
-            <div class="product-image">
-                <img src="~/Images/@Url.Content(item.ImagePath)">
-            </div>
-            <div class="product-info">
-                <h6>Pet Name:@Html.DisplayFor(modelItem => item.PetName)</h6>
-                <h6>Age:@Html.DisplayFor(modelItem => item.Age)</h6>
-                <h6>Breed Type:@Html.DisplayFor(modelItem => item.BreedType)</h6>
-                <h6>Price:@Html.DisplayFor(modelItem => item.Price)</h6>
-                <h6>Pet Type:@Html.DisplayFor(modelItem => item.PetType)</h6>
-                <h6>Gender:@Html.DisplayFor(modelItem => item.Gender)</h6>
+        <br />
+        <div class="container">
+            <div class="form-inline">
+                <div class="form-group">
+                    @Html.Label("Pet Type")
+                    @Html.DropDownList("PetType", (IEnumerable<SelectListItem>)ViewData["pettype"], new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Breed")
+                    @Html.TextBox("BreedType", null, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Price")
+                    @Html.TextBox("Price", null, new { @type = "number", @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Age")
+                    @Html.TextBox("Age", null, new { @type = "number", @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="submit" value="Search" class="btn-primary form-control">Search</button>
+                </div>
             </div>
         </div>
     }
-</section>
-<br />
-Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
-@Html.PagedListPager(Model, PageNo => Url.Action("Search", new { PageNo, pettype = ViewBag.pettypes, breedtype = ViewBag.breedtype, age = ViewBag.age, price = ViewBag.price }))
+    <section class="products">
+        @foreach (var item in Model)
+        {
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="~/Images/@Url.Content(item.ImagePath)">
+                </div>
+                <div class="product-info">
+                    <h6>Pet Name:@Html.DisplayFor(modelItem => item.PetName)</h6>
+                    <h6>Age:@Html.DisplayFor(modelItem => item.Age)</h6>
+                    <h6>Breed Type:@Html.DisplayFor(modelItem => item.BreedType)</h6>
+                    <h6>Price:@Html.DisplayFor(modelItem => item.Price)</h6>
+                    <h6>Pet Type:@Html.DisplayFor(modelItem => item.PetType)</h6>
+                    <h6>Gender:@Html.DisplayFor(modelItem => item.Gender)</h6>
+                </div>
+            </div>
+        }
+    </section>
+    <br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, PageNo => Url.Action("Search", new { PageNo, pettype = ViewBag.pettypes, breedtype = ViewBag.breedtype, age = ViewBag.age, price = ViewBag.price }))
 
 
 

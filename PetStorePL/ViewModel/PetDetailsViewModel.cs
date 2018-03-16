@@ -6,6 +6,7 @@ namespace PetStorePL.ViewModel
     public class PetDetailsViewModel
     {
         [Required]
+        [RegularExpression (("^[A-Za-z]+$"),ErrorMessage="Please enter valid name")]
         [Display(Name = "Pet Name")]
         public string PetName { get; set; }
         [Display(Name ="Image")]

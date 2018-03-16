@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DBContext\PetDbContext.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Models\Discount.cs" />
     <Compile Include="Models\Pet.cs" />
     <Compile Include="Models\PetDetails.cs" />

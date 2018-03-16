@@ -113,3 +113,5 @@ D:\final project\PetStore\Common\bin\Debug\zh-CN\Npgsql.resources.dll
 D:\final project\PetStore\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 D:\final project\PetStore\Common\obj\Debug\Common.dll
 D:\final project\PetStore\Common\obj\Debug\Common.pdb
+D:\final project\PetStore\Common\bin\Debug\Common.dll.CodeAnalysisLog.xml
+D:\final project\PetStore\Common\bin\Debug\Common.dll.lastcodeanalysissucceeded

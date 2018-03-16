@@ -121,6 +121,15 @@ namespace PetStoreDAL.Repository
                 return pet;
 
             }
+            else if (string.IsNullOrEmpty(breedtype))
+            {
+                var petage = Convert.ToInt32(age);
+                var petprice = Convert.ToSingle(price);
+                var pet = db.petdetails.Where(p => p.pet.TypeId == typeid && p.Age<=petage && p.Price <= petprice).OrderBy(b => b.PetName).Skip(pp.PageSize * pp.PageNumber).Take(pp.PageSize).ToList();
+                totalcount = db.petdetails.Count();
+                return pet;
+
+            }
             else if (string.IsNullOrEmpty(price))
             {
                 var petage = Convert.ToInt32(age);
