@@ -15,10 +15,9 @@ namespace Common.Controllers
             }
             else
             {
-                //ModelState.AddModelError("Password", "Invalid Username or Password");
+
                 return View();
             }
-
         }
         public ActionResult Logout()
         {

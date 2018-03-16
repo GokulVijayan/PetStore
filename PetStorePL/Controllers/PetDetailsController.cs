@@ -70,6 +70,7 @@ namespace Common.Controllers
                     if (!allowedExtensions.Contains(checkextension))
                     {
                         TempData["notice"] = "Select jpeg or png";
+                        ViewBag.ErrorMessage = "Select jpeg or png Image with height and width less than 600";
                     }
                     else
                     {
@@ -77,8 +78,8 @@ namespace Common.Controllers
                         {
                             if (image.Width <= 600 && image.Height <= 600)
                             {
-                                PetDetailsDto pet = ConvertToDto(petdetails, file);
-                                petService.Save(pet);
+                                PetDetailsDto pett = ConvertToDto(petdetails, file);
+                                petService.Save(pett);
                                 return RedirectToAction("Index");
                             }
                         }
@@ -86,6 +87,7 @@ namespace Common.Controllers
                 }
                 else
                 {
+                    ViewBag.ErrorMessage = "Please Select jpeg or png Image with height and width less than 600";
                     return View(petdetails);
                 }
             }
