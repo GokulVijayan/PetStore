@@ -33,13 +33,13 @@ namespace Common.Controllers
         public IEnumerable<PetViewModel> GetPetType()
         {
             IEnumerable<PetDto> petdetails = discountService.GetType();
-            var pettype = from g in petdetails
+            var petType = from g in petdetails
                     select new PetViewModel
                     {
                         PetType = g.PetType,
                         TypeId = g.TypeId
                     };
-            return pettype.ToList();
+            return petType.ToList();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

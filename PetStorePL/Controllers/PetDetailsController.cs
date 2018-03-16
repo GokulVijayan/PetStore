@@ -17,6 +17,7 @@ namespace Common.Controllers
     {
         private readonly IPetService petService;
         public static int petId;
+        public static string imagepath;
         public PetDetailsController()
         {
 
@@ -41,13 +42,13 @@ namespace Common.Controllers
         public IEnumerable<PetViewModel> GetPetType()
         {
             IEnumerable<PetDto> petdetails = petService.GetType();
-            var pettype = from g in petdetails
+            var petType = from g in petdetails
                     select new PetViewModel
                     {
                         PetType = g.PetType,
                         TypeId = g.TypeId
                     };
-            return pettype.ToList();
+            return petType.ToList();
         }
         /// <summary>
         /// To create a pet
@@ -143,10 +144,10 @@ namespace Common.Controllers
             var petType = new SelectList(type, "TypeId", "PetType");
             ViewData["pettype"] = petType;
 
-            var pagenumber = (PageNo ?? 1) - 1;
+            var pageNumber = (PageNo ?? 1) - 1;
             var totalCount = 0;
             Page p = new Page();
-            p.PageNumber = pagenumber;
+            p.PageNumber = pageNumber;
             p.PageSize = 3;
 
             p.TotalCount = totalCount;
@@ -162,15 +163,15 @@ namespace Common.Controllers
                     return View();
                 else
                 {
-                    IPagedList<PetDetailsViewModel> pageOrders = new StaticPagedList<PetDetailsViewModel>(petdetails, pagenumber + 1, 3, totalCount);
+                    IPagedList<PetDetailsViewModel> pageOrders = new StaticPagedList<PetDetailsViewModel>(petdetails, pageNumber + 1, 3, totalCount);
                     return View(pageOrders);
                 }
             }
             else
             {
                 var pet = petService.GetPetDetails(pettype, breedtype, age, price, p, out totalCount);
-                var petdetails = GetAllPets(pet).ToList();
-                IPagedList<PetDetailsViewModel> pageOrders = new StaticPagedList<PetDetailsViewModel>(petdetails, pagenumber + 1, 3, totalCount);
+                var petDetails = GetAllPets(pet).ToList();
+                IPagedList<PetDetailsViewModel> pageOrders = new StaticPagedList<PetDetailsViewModel>(petDetails, pageNumber + 1, 3, totalCount);
                 return View(pageOrders);
 
             }
@@ -182,7 +183,7 @@ namespace Common.Controllers
         /// <returns></returns>
         public IEnumerable<PetDetailsViewModel> GetAllPets(IEnumerable<PetDetailsDto> petdetails)
         {
-            IEnumerable<PetDetailsViewModel> pt = from g in petdetails
+            IEnumerable<PetDetailsViewModel> pet = from g in petdetails
                                                   select new PetDetailsViewModel
                                                   {
                                                       Age = g.Age,
@@ -193,7 +194,7 @@ namespace Common.Controllers
                                                       PetType = g.PetType,
                                                       Gender = g.Gender
                                                   };
-            return pt.ToList();
+            return pet.ToList();
         }
         /// <summary>
         /// To sort by pet type
@@ -203,8 +204,8 @@ namespace Common.Controllers
         public IEnumerable<PetDetailsViewModel> SortByPetType(string type,Page page, out int totalCount)
         {
 
-            IEnumerable<PetDetailsDto> petdetails = petService.SortByPetType(type, page, out totalCount);
-            var pet = GetAllPets(petdetails);
+            IEnumerable<PetDetailsDto> petDetails = petService.SortByPetType(type, page, out totalCount);
+            var pet = GetAllPets(petDetails);
             return pet;
 
         }
@@ -255,19 +256,17 @@ namespace Common.Controllers
         [Authorize]
         public ActionResult Edit(int id)
         {
-#pragma warning disable CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
             if (id == null)
-#pragma warning restore CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             else
             {
                 PetDetailsViewModel petview = GetPetById(id);
-                TempData["imagepath"] = petview.ImagePath;
-                var xx = GetPetType();
+                imagepath= petview.ImagePath;
+                var type = GetPetType();
                 petId = id;
-                var petType = new SelectList(xx, "TypeId", "PetType", petview.PetType);
+                var petType = new SelectList(type, "TypeId", "PetType", petview.PetType);
                 ViewData["pettype"] = petType;
                 return View(petview);
             }
@@ -281,8 +280,7 @@ namespace Common.Controllers
                 if (file != null)
                 {
                     file.SaveAs(HttpContext.Server.MapPath("~/Images/") + file.FileName);
-                    var filepath = HttpContext.Server.MapPath("~/Images/") + file.FileName;
-
+                    var filePath = HttpContext.Server.MapPath("~/Images/") + file.FileName;
                     PetDetailsDto pet = new PetDetailsDto
                     {
                         Age = petdetails.Age,
@@ -301,7 +299,7 @@ namespace Common.Controllers
                     PetDetailsDto pet = new PetDetailsDto
                     {
                         Age = petdetails.Age,
-                        ImagePath = Convert.ToString(TempData["imagepath"].ToString()),
+                        ImagePath = imagepath,
                         BreedType = petdetails.BreedType,
                         PetName = petdetails.PetName,
                         Price = petdetails.Price,
@@ -312,10 +310,10 @@ namespace Common.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            var xx = GetPetType();
-            var petType = new SelectList(xx, "TypeId", "PetType", petdetails.PetType);
+            var type = GetPetType();
+            var petType = new SelectList(type, "TypeId", "PetType", petdetails.PetType);
             ViewData["pettype"] = petType;
-            petdetails.ImagePath = Convert.ToString(TempData["imagepath"].ToString());
+            petdetails.ImagePath = imagepath;
             return View(petdetails);
         }
         /// <summary>
@@ -326,7 +324,7 @@ namespace Common.Controllers
         public PetDetailsViewModel GetPetById(int id)
         {
             PetDetailsDto pet = petService.GetPetById(id);
-            PetDetailsViewModel pt = new PetDetailsViewModel
+            PetDetailsViewModel petView = new PetDetailsViewModel
             {
                 Age = pet.Age,
                 BreedType = pet.BreedType,
@@ -336,7 +334,7 @@ namespace Common.Controllers
                 PetType = pet.PetType,
                 Gender = pet.Gender
             };
-            return pt;
+            return petView;
         }
     }
 }

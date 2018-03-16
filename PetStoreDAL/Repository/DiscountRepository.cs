@@ -29,11 +29,11 @@ namespace PetStoreDAL.Repository
         }
         public void DeleteDiscount(string pettype, string discount)
         {
-            var typeid = db.pet.Where(p => p.PetType == pettype).Select(p => p.TypeId).FirstOrDefault();
-            var discountrate = Convert.ToSingle(discount);
-            var id = db.discounts.Where(d => d.TypeId == typeid && d.DiscountRate == discountrate).Select(d => d.DiscountId).FirstOrDefault();
-            var discountrecord = db.discounts.Where(d => d.DiscountId == id).FirstOrDefault();
-            db.discounts.Remove(discountrecord);
+            var typeId = db.pet.Where(p => p.PetType == pettype).Select(p => p.TypeId).FirstOrDefault();
+            var discountRate = Convert.ToSingle(discount);
+            var id = db.discounts.Where(d => d.TypeId == typeId && d.DiscountRate == discountRate).Select(d => d.DiscountId).FirstOrDefault();
+            var discountRecord = db.discounts.Where(d => d.DiscountId == id).FirstOrDefault();
+            db.discounts.Remove(discountRecord);
             Save();
         }
     }
