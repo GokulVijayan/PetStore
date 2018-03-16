@@ -254,7 +254,7 @@ namespace Common.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [Authorize]
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -262,10 +262,11 @@ namespace Common.Controllers
             }
             else
             {
-                PetDetailsViewModel petview = GetPetById(id);
+                var petID = Convert.ToInt32(id);
+                PetDetailsViewModel petview = GetPetById(petID);
                 imagepath= petview.ImagePath;
                 var type = GetPetType();
-                petId = id;
+                petId = petID;
                 var petType = new SelectList(type, "TypeId", "PetType", petview.PetType);
                 ViewData["pettype"] = petType;
                 return View(petview);
