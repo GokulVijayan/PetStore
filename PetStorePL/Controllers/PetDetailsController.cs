@@ -43,11 +43,11 @@ namespace Common.Controllers
         {
             IEnumerable<PetDto> petdetails = petService.GetType();
             var petType = from g in petdetails
-                    select new PetViewModel
-                    {
-                        PetType = g.PetType,
-                        TypeId = g.TypeId
-                    };
+                          select new PetViewModel
+                          {
+                              PetType = g.PetType,
+                              TypeId = g.TypeId
+                          };
             return petType.ToList();
         }
         /// <summary>
@@ -70,7 +70,7 @@ namespace Common.Controllers
                     var checkextension = Path.GetExtension(file.FileName).ToLower();
                     if (!allowedExtensions.Contains(checkextension))
                     {
-                        
+
                         ViewBag.ErrorMessage = "Select jpeg or png Image with height and width less than 600";
                     }
                     else
@@ -158,7 +158,7 @@ namespace Common.Controllers
             if ((string.IsNullOrEmpty(breedtype) && (string.IsNullOrEmpty(age) && (string.IsNullOrEmpty(price)))))
             {
 
-                List<PetDetailsViewModel> petdetails = SortByPetType(pettype,p, out totalCount).ToList();
+                List<PetDetailsViewModel> petdetails = SortByPetType(pettype, p, out totalCount).ToList();
                 if (petdetails == null)
                     return View();
                 else
@@ -184,16 +184,16 @@ namespace Common.Controllers
         public IEnumerable<PetDetailsViewModel> GetAllPets(IEnumerable<PetDetailsDto> petdetails)
         {
             IEnumerable<PetDetailsViewModel> pet = from g in petdetails
-                                                  select new PetDetailsViewModel
-                                                  {
-                                                      Age = g.Age,
-                                                      BreedType = g.BreedType,
-                                                      PetName = g.PetName,
-                                                      ImagePath = g.ImagePath,
-                                                      Price = g.Price,
-                                                      PetType = g.PetType,
-                                                      Gender = g.Gender
-                                                  };
+                                                   select new PetDetailsViewModel
+                                                   {
+                                                       Age = g.Age,
+                                                       BreedType = g.BreedType,
+                                                       PetName = g.PetName,
+                                                       ImagePath = g.ImagePath,
+                                                       Price = g.Price,
+                                                       PetType = g.PetType,
+                                                       Gender = g.Gender
+                                                   };
             return pet.ToList();
         }
         /// <summary>
@@ -201,7 +201,7 @@ namespace Common.Controllers
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public IEnumerable<PetDetailsViewModel> SortByPetType(string type,Page page, out int totalCount)
+        public IEnumerable<PetDetailsViewModel> SortByPetType(string type, Page page, out int totalCount)
         {
 
             IEnumerable<PetDetailsDto> petDetails = petService.SortByPetType(type, page, out totalCount);
@@ -264,7 +264,7 @@ namespace Common.Controllers
             {
                 var petID = Convert.ToInt32(id);
                 PetDetailsViewModel petview = GetPetById(petID);
-                imagepath= petview.ImagePath;
+                imagepath = petview.ImagePath;
                 var type = GetPetType();
                 petId = petID;
                 var petType = new SelectList(type, "TypeId", "PetType", petview.PetType);

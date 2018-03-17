@@ -34,11 +34,11 @@ namespace Common.Controllers
         {
             IEnumerable<PetDto> petdetails = discountService.GetType();
             var petType = from g in petdetails
-                    select new PetViewModel
-                    {
-                        PetType = g.PetType,
-                        TypeId = g.TypeId
-                    };
+                          select new PetViewModel
+                          {
+                              PetType = g.PetType,
+                              TypeId = g.TypeId
+                          };
             return petType.ToList();
         }
         [HttpPost]
@@ -48,14 +48,14 @@ namespace Common.Controllers
             if (ModelState.IsValid)
             {
                 DiscountDto discount = ConvertToDto(discountdetails);
-                discountService.Save(discount); 
+                discountService.Save(discount);
                 return RedirectToAction("Index");
             }
             var pet = GetPetType();
             var petType = new SelectList(pet, "TypeId", "PetType");
             ViewData["pettype"] = petType;
             return View(discountdetails);
-            
+
         }
         DiscountDto ConvertToDto(DiscountViewModel discountdetails)
         {
@@ -81,21 +81,21 @@ namespace Common.Controllers
         IEnumerable<DiscountViewModel> GetAllDiscount(IEnumerable<DiscountDto> discount)
         {
             IEnumerable<DiscountViewModel> pt = from g in discount
-                                                  select new DiscountViewModel
-                                                  {
-                                                   DiscountRate=g.DiscountRate,
-                                                   PetType=g.PetType,
-                                                   StartDate=g.StartDate,
-                                                   EndDate=g.EndDate
-                                                  };
+                                                select new DiscountViewModel
+                                                {
+                                                    DiscountRate = g.DiscountRate,
+                                                    PetType = g.PetType,
+                                                    StartDate = g.StartDate,
+                                                    EndDate = g.EndDate
+                                                };
             return pt.ToList();
         }
         [Authorize]
-        public ActionResult Delete(string pettype,string discount)
+        public ActionResult Delete(string pettype, string discount)
         {
             try
             {
-                discountService.DeleteDiscount(pettype,discount);
+                discountService.DeleteDiscount(pettype, discount);
                 return RedirectToAction("Index", "Discounts");
             }
             catch (Exception ex)
